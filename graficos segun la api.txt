@@ -1,0 +1,17 @@
+Tipo de grafica por API:
+
+Composicion del alumnado por nivel: Grafico de torta
+
+Nivel de asistencia general: Grafico de barras
+
+Comparacion de niveles por asistencia de curso: Graficos de barras apiladas
+
+Evolución anual de nivel de asistencia por mes: Graficos de lineas
+
+Nivel general de calificaciones en la institución (aprobados/desaprobados): Doble barra
+
+Comparativa de niveles de calificaciones por curso: ??
+
+Esta de situación de envío de comunicados: Grafico de torta 
+
+ 

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de graficos</title>
+</head>
+<body>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="poblacion-tab" data-bs-toggle="tab" data-bs-target="#poblacion-tab-pane" type="button" role="tab" aria-controls="poblacion-tab-pane" aria-selected="true">Alumnado por nivel</button>
+    </li>
+    <li class="nav-item" role="presentation">
+    <button class="nav-link" id="tablas-tab" data-bs-toggle="tab" data-bs-target="#tablas-tab-pane" type="button" role="tab" aria-controls="tablas-tab-pane" aria-selected="false">Asistencia</button>
+    </li>
+    <li class="nav-item" role="presentation">
+    <button class="nav-link" id="datos-tab" data-bs-toggle="tab" data-bs-target="#datos-tab-pane" type="button" role="tab" aria-controls="datos-tab-pane" aria-selected="false">Calificaciones</button>
+    </li>
+    <li class="nav-item" role="presentation">
+    <button class="nav-link" id="datos-tab" data-bs-toggle="tab" data-bs-target="#datos-tab-pane" type="button" role="tab" aria-controls="datos-tab-pane" aria-selected="false">Comunicados</button>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="poblacion-tab-pane" role="tabpanel" aria-labelledby="poblacion-tab" tabindex="0">
+        <h1>Composicion del alumnado por nivel:</h1>
+    <canvas id="graficoComposicionNiveles"></canvas>
+
+    <table class="table" border="2px" id="tablaUsuarios"> 
+        <thead>
+            <br>
+            <tr>
+            <th scope="col">Nivel</th>
+                <th scope="col">Frecuencia Absoluta</th>
+                <th scope="col">Frecuencia Acumulada</th>
+                <th scope="col">Porcentaje (%)</th>
+            </tr>
+            <br>
+        </thead>
+    <tbody id="nivelesTabla">
+
+    </tbody>
+    </table>
+
+</div>
+    </div>
+    <div class="tab-pane fade" id="tablas-tab-pane" role="tabpanel" aria-labelledby="tablas-tab" tabindex="0">
+        <div>
+            <br>
+            <h2>Nivel de asistencia general:</h2>
+            <br>
+            <canvas id="graficoAsistenciaGeneral"></canvas>
+            <table class="table" border="2px">
+                <thead>
+                    <tr>
+                    </tr>
+                </thead>
+                <tbody id="nivelesTabla"></tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Comparacion de niveles por asistencia de curso:</h2>
+            <canvas id="graficoComparacionCursos"></canvas>
+            <table class="table" border="2px">
+                <thead>
+                    <tr>
+                    </tr>
+                </thead>
+                <tbody id="tablaCursos"></tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Evolucion anual de nivel de asistencia por mes:</h2>
+            <canvas id="graficoEvolucionMensual"></canvas>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="datos-tab-pane" role="tabpanel" aria-labelledby="datos-tab" tabindex="0">
+        <div>
+            <h2>Nivel general de calificaciones en la institucion:</h2>
+
+            <canvas id="graficoCalificacionesInstitucion"></canvas>
+        </div>
+        <div>
+            <h2>Comparativa de niveles de calificaciones por curso:</h2>
+
+            <canvas id="graficoComparativaCalificacionesCurso"></canvas>
+        </div>
+        <table class="table" border="2px">
+            <thead>
+            </thead>
+            <tbody id="estadisticasTabla">
+                <tr>
+                    //graficos calificaciones// 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div> 
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
